@@ -12,3 +12,16 @@ const obj = {
 };
 
 const { age, ...noAge } = obj;
+
+
+//Tambien podemos usar Delete
+
+const obj = {
+  name: 'John',
+  lastname: 'Doe',
+  age: 45,
+  id: 'U-9472000013',
+  location: 'Norway',
+};
+const newObj = { ...obj };
+delete newObj.age;
