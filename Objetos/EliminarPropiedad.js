@@ -1,5 +1,5 @@
 
-//Tenemos un objeto y queremos eliminar ela propiedad age,
+//Tenemos un objeto y queremos eliminar la propiedad age,
 // creamos dos constantes, age que es lo que queremos eliminar
 // y noAge que es el objeto que se devuelve
 
