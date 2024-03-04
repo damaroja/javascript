@@ -12,6 +12,9 @@ const cars = [
   ];
 
 
+
+//Aqui encontramos el, valor, no el vehiculo  !!IMPORTANTE
+
 const highestLower = (cars) => {
     const highestMileage = cars.reduce((acc, car) => acc > car.mileage ? acc : car.mileage, 0);
     const lowestMileage = cars.reduce((acc, car) => acc < car.mileage ? acc : car.mileage, cars[0].mileage);
