@@ -44,3 +44,64 @@ const capitalizePhrase = (phrase) => {
 }
 
 module.exports = { capitalizePhrase }
+
+
+
+
+//**************************************************
+
+
+
+
+
+
+const {capitalizePhrase} = require('./app');
+
+
+describe('capitalizePhrase', () => {
+
+    test('should capitalize the first letter of each word in a phrase', () => {
+        const input = 'the quick brown fox';
+        const expected = 'The Quick Brown Fox';
+        const result = capitalizePhrase(input);
+        expect(result).toBe(expected);
+    });
+
+    test('should throw an error if the input is not a string', () => {
+        expect(() => capitalizePhrase(123)).toThrow('Not a string');
+    });
+    test('should throw an error if the input is not a string', () => {
+        expect(() => capitalizePhrase({})).toThrow('Not a string');
+    });
+    test('should throw an error if the input is not a string', () => {
+        expect(() => capitalizePhrase([])).toThrow('Not a string');
+    });
+    test('should throw an error if the input is not a string', () => {
+        expect(() => capitalizePhrase(null)).toThrow('Not a string');
+    });
+
+    test('should throw an error if the input is undefined', () => {
+        expect(() => capitalizePhrase()).toThrow('Undefined string');
+    });
+
+    test('should return an empty string if the input is an empty string', () => {
+        expect(() => capitalizePhrase('')).toThrow('Empty string')
+    });
+
+    test('should capitalize the first letter of a single word', () => {
+        const input = 'hello';
+        const expected = 'Hello';
+        const result = capitalizePhrase(input);
+        expect(result).toBe(expected);
+    });
+
+    test('should capitalize the first letter of a single word in a phrase', () => {
+        const input = 'hello world';
+        const expected = 'Hello World';
+        const result = capitalizePhrase(input);
+        expect(result).toBe(expected);
+    });
+
+});
+
+
