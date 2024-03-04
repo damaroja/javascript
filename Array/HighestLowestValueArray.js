@@ -10,3 +10,10 @@ const cars = [
     { make: 'Audi', model: 'R8', year: 2020, mileage: 13000 },
     { make: 'Tesla', model: 'Model 3', year: 2018, mileage: 50000 },
   ];
+
+
+const highestLower = (cars) => {
+    const highestMileage = cars.reduce((acc, car) => acc > car.mileage ? acc : car.mileage, 0);
+    const lowestMileage = cars.reduce((acc, car) => acc < car.mileage ? acc : car.mileage, cars[0].mileage);
+    return { highestMileage,  lowestMileage}
+}
