@@ -5,7 +5,7 @@
 
 
 
-
+//DEvuelve la maxima suma de un subconjunto de k elementos del Array
 
 const maxSum = (arr, k) => {
   const ArrOrdenado = arr.sort((a, b) => a - b);
